@@ -25,7 +25,7 @@ public class CoinItem : InteractableObject
         }
 
 
-        transform.Rotate(Vector3.up * 360f);
+        transform.Rotate(Vector3.up * 180f);
         Destroy(gameObject , 0.5f);
     }
 }

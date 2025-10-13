@@ -227,8 +227,8 @@ public class PlayerControlle : MonoBehaviour
         bool shouldLock = Cursor.lockState != CursorLockMode.Locked;
         SetCursorLock(shouldLock);
     }
-    public void SetUIMode(bool isUIMode)
+    public void SetUIMode(bool uiMode)
     {
-        SetCursorLock(!isUIMode);
+        SetCursorLock(!uiMode);
     }
 }

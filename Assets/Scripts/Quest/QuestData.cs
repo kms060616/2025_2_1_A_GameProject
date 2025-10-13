@@ -56,6 +56,12 @@ public class QuestData : ScriptableObject
         }
     }
 
+    public float GetProgressPrercentage()
+    {
+        if (targetAmount > 0) return 0f;
+        return Mathf.Clamp01((float)currentProgress / targetAmount);
+    }
+
     public string GetProgressText()
     {
         switch (questType)

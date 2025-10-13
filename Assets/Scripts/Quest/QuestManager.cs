@@ -19,7 +19,7 @@ public class QuestManager : MonoBehaviour
     [Header("Äù½ºÆ® ¸ñ·Ï")]
     public QuestData[] availableQuests;
 
-    private QuestData currentQuest;
+    public QuestData currentQuest;
     private int currentQuestIndex = 0;
 
     private void Awake()
@@ -152,7 +152,7 @@ public class QuestManager : MonoBehaviour
             currentQuest = null;
             if(QuestUI != null)
             {
-                QuestUI.gameObject.SetActive(true);
+                QuestUI.gameObject.SetActive(false);
             }
         }
     }
@@ -168,6 +168,11 @@ public class QuestManager : MonoBehaviour
         if (currentQuest.IsCompleted()  && !currentQuest.isCompleted)
         {
             currentQuest.isCompleted = true;
+
+            if (completeButton != null)
+            {
+                completeButton.gameObject.SetActive(true);
+            }
         }
             
 
