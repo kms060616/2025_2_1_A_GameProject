@@ -41,7 +41,7 @@ public class InventorySlot : MonoBehaviour
     {
         amount -= value;
 
-        if (amount < 0)
+        if (amount <= 0)
         {
             ClearSlot();
         }

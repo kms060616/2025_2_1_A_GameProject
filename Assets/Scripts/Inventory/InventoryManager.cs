@@ -87,7 +87,7 @@ public class InventoryManager : MonoBehaviour
         {
             if (slot.item == null)
             {
-                slot.SetItem(item, amount);
+                slot.SetItem(item,amount);
                 return true;
             }
         }

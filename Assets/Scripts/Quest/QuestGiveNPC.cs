@@ -6,7 +6,7 @@ public class QuestGiveNPC : InteractableObject
 {
     [Header("NPC Quest Settings")]
     public QuestData questToGive;
-    public string npcName = " NPC";
+    public string npcName = "NPC";
     public string questStartMessage = "새로운퀘스트가 있습니다. ";
     public string noQuestMessage = "퀘스트가 없습니다. ";
     public string QuestAlreadyActiveMessage = "이미 진행중인 퀘스트가 있습니다.";
