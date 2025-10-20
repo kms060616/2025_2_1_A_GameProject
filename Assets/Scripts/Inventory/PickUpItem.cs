@@ -13,7 +13,7 @@ public class PickUpItem : InteractableObject
 
         if (InventoryManager.Instance != null)
         {
-            bool added = InventoryManager.Instance.AddItem(itemData);
+            bool added = InventoryManager.Instance.AddItem(itemData, amount);
 
             if (added)
             {

@@ -74,6 +74,7 @@ public class InventoryManager : MonoBehaviour
                 int spaceleft = item.maxStack - slot.amount;
                 int amountToAdd = Mathf.Min(amount, spaceleft);
                 slot.AddAmount(amountToAdd);
+                amount -= amountToAdd; 
 
                 if(amountToAdd < 0)
                 {
