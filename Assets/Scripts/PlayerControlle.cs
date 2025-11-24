@@ -41,6 +41,8 @@ public class PlayerControlle : MonoBehaviour
 
     private bool isUIMode = false;  //UI모드 설정
 
+    public GameObject effectPos;
+
 
    
     // Start is called before the first frame update
@@ -92,6 +94,7 @@ public class PlayerControlle : MonoBehaviour
                 isLanding = true;
                 landingTimer = landingDuration;
                 Debug.Log("착지");
+                EffectManager.instance.PlayerEffect("착지이펙트", transform.position);
             }
         }
 
@@ -190,6 +193,7 @@ public class PlayerControlle : MonoBehaviour
             if(animator != null)
             {
                 animator.SetTrigger("attackTrigger");
+                EffectManager.instance.PlayEffectWithDelay("공격이벤트", effectPos.transform.position, Quaternion.identity, 0.5f, 1.0f);
             }
         }
     }
